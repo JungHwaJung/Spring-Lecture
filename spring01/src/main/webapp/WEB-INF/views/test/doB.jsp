@@ -6,15 +6,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>구구단 화면</title>
-<c:set var="path" value="${pageContext.request.contextPath }" />
+<title>doB 화면</title>
 <%@ include file="../include/header.jsp" %>
 </head>
 <body>
 <%@ include file="../include/menu.jsp" %>
-	<div style="text-align:center;"> 구구단 결과<br><br>
-		${result}
-	</div>
-
+<hr>
+<h2>doB 페이지 입니다</h2>
+<h2> ${message} </h2>
 </body>
 </html>

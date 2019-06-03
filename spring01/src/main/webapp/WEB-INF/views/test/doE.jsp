@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인화면</title>
-<%@ include file="include/header.jsp" %>
+<title>doE 화면</title>
+<%@ include file="../include/header.jsp" %>
 </head>
 <body>
-<%@ include file="include/menu.jsp" %>
-<hr>
-<h2>${message}</h2>
+<%@ include file="../include/menu.jsp" %>
+
 </body>
 </html>
