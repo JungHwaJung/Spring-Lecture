@@ -6,17 +6,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메뉴 화면</title>
+<title>구구단 화면</title>
 <c:set var="path" value="${pageContext.request.contextPath }" />
+<%@ include file="../include/header.jsp" %>
 </head>
 <body>
-	<div style="text-align:center;">
-		<a href="${path}/">main</a>
-		<a href="${path}/gugu.do?dan=3">구구단</a>
-		<a href="${path}/test.do">테스트</a>
-		<a href="${path}/member/list.do">회원관리</a>
+<%@ include file="../include/menu.jsp" %>
+	<div style="text-align:center;"> 구구단 결과<br><br>
+		${result}
 	</div>
 
-	<h2>${message}</h2>
 </body>
 </html>
