@@ -23,10 +23,10 @@
 	<tr>
 		<td>${row.userid}</td>
 		<td>
-			<a href="${path}/member/view.do?userid=${userid}">${row.name}</a>
+			<a href="${path}/member/view.do?userid=${row.userid}">${row.name}</a>
 		</td>
 		<td>${row.email}</td>
-		<td>${row.join_date}</td>
+		<td><fmt:formatDate value="${row.join_date}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 	</tr>
 	</c:forEach>
 </table>
