@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+<mapper namespace="address">
+	<select id="addressBookList" resultType="addressbookDto">
+		select * from address_book
+		order by name
+	</select>
+	
+	<insert id="insertAddressBook">
+		insert into address_book(userid, passwd, name, birthday, callnum) values
+		(#{userid}, #{passwd}, #{name}, #{birthday}, #{callnum})
+	</insert>
+	
+	<select id="viewAddressBook" resultType="addressbookDto">
+		select * from address_book where userid=#{userid}
+	</select>
+	
+	<select id="updateAddressBook">
+		update address_book set passwd=#{passwd}, name=#{name}, birthday=#{birthday}, callnum=#{callnum}
+		where userid=#{userid}
+	</select>
+	
+	<select id="deleteAddressBook">
+		delete from address_book where userid=#{userid}
+	</select>
+	
+	<!-- 비밀번호 체크 -->
+	<select id="checkPw" resultType="int">
+		select count(*) from address_book where userid=#{userid} and passwd=#{passwd}
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
