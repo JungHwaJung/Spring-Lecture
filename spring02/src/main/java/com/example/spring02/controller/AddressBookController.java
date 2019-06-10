@@ -41,7 +41,7 @@ public class AddressBookController {
 		logger.info("back() 시작");
 		List<AddressBookDTO> list = addressBookService.addressBookList();
 		model.addAttribute("list", list);
-		return "address/address_book";
+		return "address/addressbook_list";
 	}
 	
 	// @ModelAttribute에 폼에서 입력한 데이터가 저장됨
