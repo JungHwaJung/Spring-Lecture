@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<insert id="insertAddressBook">
 		insert into address_book (userid, passwd, name, birthday, callnum) values
-		(#{userid, jdbcType=VARCHAR}, #{passwd, jdbcType=VARCHAR}, #{name, jdbcType=VARCHAR}, #{birthday, jdbcType=VARCHAR}, #{callnum, jdbcType=VARCHAR})
+		(#{userid}, #{passwd}, #{name}, #{birthday}, #{callnum})
 	</insert>
 	
 	<select id="viewAddressBook" resultType="addressbookDto">

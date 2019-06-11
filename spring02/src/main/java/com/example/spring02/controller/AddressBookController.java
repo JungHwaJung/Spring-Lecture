@@ -50,7 +50,6 @@ public class AddressBookController {
 		logger.info("insert() 시작");
 		// @ModelAttribute AddressBookDTO dto 하면 일일이
 		// request.getParameter로 값을 전달하지 않아도 됨
-		System.out.println("dto.getUserid() : " + dto.toString);
 		addressBookService.insertAddressBook(dto);
 		
 		return "redirect:/address/list.do";
