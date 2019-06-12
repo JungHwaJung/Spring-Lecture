@@ -36,14 +36,6 @@ public class AddressBookController {
 		return "address/write";
 	}
 	
-	@RequestMapping("/address/back.do")
-	public String back(Model model) {
-		logger.info("back() 시작");
-		List<AddressBookDTO> list = addressBookService.addressBookList();
-		model.addAttribute("list", list);
-		return "address/addressbook_list";
-	}
-	
 	// @ModelAttribute에 폼에서 입력한 데이터가 저장됨
 	@RequestMapping("/address/insert.do")	//사용자가 요청한 주소
 	public String insert(@ModelAttribute AddressBookDTO dto) {

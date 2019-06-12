@@ -19,7 +19,8 @@ pageEncoding="UTF-8"%>
 			}
 		});
 		$("#btnBack").click(function() {
-			document.form1.action="${path}/address/back.do";
+			document.form1.action="${path}/address/list.do";
+			document.form1.submit();
 		});
 		
 	})
