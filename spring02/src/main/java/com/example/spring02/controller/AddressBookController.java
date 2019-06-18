@@ -31,7 +31,7 @@ public class AddressBookController {
 	}
 	
 	@RequestMapping("/address/write.do")
-	public String write() {
+	public String write(Model model) {
 		logger.info("write() 시작");
 		return "address/write";
 	}
@@ -53,6 +53,12 @@ public class AddressBookController {
 		logger.info("view() 시작");
 		model.addAttribute("dto", addressBookService.viewAddressBook(userid));
 		return "address/view";
+	}
+	
+	@RequestMapping("/address/noticeboard.do")
+	public String noticeBoard(Model model) {
+		logger.info("noticeBoard() 시작");
+		return "address/noticeboard";
 	}
 	
 	@RequestMapping("/address/update.do")
