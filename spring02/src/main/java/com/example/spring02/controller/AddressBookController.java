@@ -55,12 +55,6 @@ public class AddressBookController {
 		return "address/view";
 	}
 	
-	@RequestMapping("/address/noticeboard.do")
-	public String noticeBoard(Model model) {
-		logger.info("noticeBoard() 시작");
-		return "address/noticeboard";
-	}
-	
 	@RequestMapping("/address/update.do")
 	public String update(@ModelAttribute AddressBookDTO dto, Model model) {
 		//System.out.println("dto.getUserid() : " + dto.getUserid());
