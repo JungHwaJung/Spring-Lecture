@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>구구단 화면</title>
 <c:set var="path" value="${pageContext.request.contextPath }" />
 <%@ include file="../include/header.jsp" %>
 </head>
