@@ -19,15 +19,15 @@ public class ProductController {
 	@Inject
 	ProductService productService;
 	
-	@RequestMapping(value="/", method = RequestMethod.GET)
+	/*@RequestMapping(value="/", method = RequestMethod.GET)
 	public String main() {
 		return "/include/filemenu";
-	}
+	}*/
 	
-	@RequestMapping("/shop/product/list.do")
+	@RequestMapping("shop/product/list.do")
 	public ModelAndView list(ModelAndView mav) {
 		logger.info("list시작");
-		mav.setViewName("/shop/product/product_list");		//이동할 페이지 이름
+		mav.setViewName("shop/product/product_list");		//이동할 페이지 이름
 		mav.addObject("list", productService.listProduct());	//데이터 저장
 		return mav;		//페이지 이동
 	}

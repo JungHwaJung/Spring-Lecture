@@ -24,9 +24,14 @@
 	<h2>링크 테스트</h2>
 		<a href="${path}/test/doA">doA</a>
 		<a href="javascript:doB()">doB</a>
+		<a href="javascript:doC()">doC</a>
 	
 		<div id="result">
 		
+		</div>
+		<div id="write">
+			아이디 <input type="text" name="id">
+			비밀번호 <input type="password" name="pass">
 		</div>
 </body>
 </html>

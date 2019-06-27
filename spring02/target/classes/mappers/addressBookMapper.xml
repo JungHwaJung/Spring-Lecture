@@ -11,7 +11,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<insert id="insertAddressBook">
-		insert into address_book(userid, passwd, name, birthday, callnum) values
+		insert into address_book (userid, passwd, name, birthday, callnum) values
 		(#{userid}, #{passwd}, #{name}, #{birthday}, #{callnum})
 	</insert>
 	

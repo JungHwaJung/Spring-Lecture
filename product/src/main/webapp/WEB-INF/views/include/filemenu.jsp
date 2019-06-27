@@ -10,7 +10,7 @@
 </head>
 <body>
 <div align="center">
-	<a href="${path}/spring/upload/uploadForm">업로드 테스트</a>
+	<a href="${path}/upload/uploadForm">업로드 테스트</a>
 	<a href="${path}/shop/product/list.do">상품 목록</a>
 </div>
 </body>

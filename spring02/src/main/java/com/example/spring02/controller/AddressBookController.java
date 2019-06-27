@@ -31,18 +31,19 @@ public class AddressBookController {
 	}
 	
 	@RequestMapping("/address/write.do")
-	public String write() {
+	public String write(Model model) {
 		logger.info("write() 시작");
 		return "address/write";
 	}
 	
-	// @ModelAttribute에 폼에서 입력하 데이터가 저장됨
+	// @ModelAttribute에 폼에서 입력한 데이터가 저장됨
 	@RequestMapping("/address/insert.do")	//사용자가 요청한 주소
 	public String insert(@ModelAttribute AddressBookDTO dto) {
 		logger.info("insert() 시작");
 		// @ModelAttribute AddressBookDTO dto 하면 일일이
 		// request.getParameter로 값을 전달하지 않아도 됨
 		addressBookService.insertAddressBook(dto);
+		
 		return "redirect:/address/list.do";
 		// 만약 redirect를 붙이지 않으면 forward가 되어 주소가 바뀌지 않음
 	}

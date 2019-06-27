@@ -18,6 +18,10 @@ pageEncoding="UTF-8"%>
 			document.form1.submit();
 			}
 		});
+		$("#btnBack").click(function() {
+			document.form1.action="${path}/address/list.do";
+			document.form1.submit();
+		});
 		
 	})
 </script>
@@ -54,6 +58,7 @@ pageEncoding="UTF-8"%>
 				<td colspan="2" align="center">
 				<input type="button" value="수정" id="btnUpdate">
 				<input type="button" value="삭제" id="btnDelete">
+				<input type="button" value="뒤로가기" id="btnBack">
 				<div style="color:red;">${message}</div>
 				</td>
 			</tr>

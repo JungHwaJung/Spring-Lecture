@@ -24,7 +24,7 @@ public class AddressBookDAOImpl implements AddressBookDAO {
 
 	@Override
 	public void insertAddressBook(AddressBookDTO vo) {
-		sqlSession.insert("address.insertAddressBook");
+		sqlSession.insert("address.insertAddressBook", vo);
 	}
 
 	@Override
