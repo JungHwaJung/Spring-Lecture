@@ -20,12 +20,11 @@
 		</tr>
 		<%-- <c:forEach var="row" items="${list}">
 		<tr>
-			<td>${row.userid}</td>
+			<td>${row.num}</td>
+			<td><a href="${path}/datail/${row.userid}">${row.title}</td>
 			<td>
-				<a href="${path}/address/view.do?userid=${row.userid}">${row.name}</a>
+				<a href="${path}/address/view.do?userid=${row.userid}">${row.userid}</a>
 			</td>
-			<td>${row.birthday}</td>
-			<td>${row.callnum}</td>
 			<td><fmt:formatDate value="${row.join_date}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 		</tr>
 		</c:forEach>--%>
