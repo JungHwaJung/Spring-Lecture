@@ -9,7 +9,7 @@
 </head>
 <body>
 <%@ include file="include/menu.jsp" %>
-<input type="button" value="글쓰기" onclick="location.href='${path}/address/nbwrite.do'">
+<input type="button" value="글쓰기" onclick="location.href='${path}/nbwrite.do'">
 	
 	<table border="1" width="700px">
 		<tr>

@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>게시판 글쓰기</title>
+<%@ include file="include/header.jsp" %>
 </head>
 <body>
-	<h2>${message}</h2>
+<%@ include file="include/menu.jsp" %>
+<h2>글쓰기 화면입니다</h2>
+<hr>
 </body>
 </html>
