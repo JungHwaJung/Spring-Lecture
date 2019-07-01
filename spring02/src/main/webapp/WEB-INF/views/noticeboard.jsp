@@ -23,7 +23,7 @@
 			<td>${row.seq}</td>
 			<td><a href="${path}/datail/${row.userid}">${row.title}</a></td>
 			<td>
-				<a href="${path}/address/view.do?userid=${row.userid}">${row.userid}</a>
+				<!-- <a href="${path}/address/view.do?userid=${row.userid}"> -->${row.userid}
 			</td>
 			<td><fmt:formatDate value="${row.join_date}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 		</tr>
