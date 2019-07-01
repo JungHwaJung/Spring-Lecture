@@ -18,16 +18,16 @@
 			<td>글쓴이</td>
 			<td>날짜</td>
 		</tr>
-		<%-- <c:forEach var="row" items="${list}">
+		<c:forEach var="row" items="${list}">
 		<tr>
-			<td>${row.num}</td>
-			<td><a href="${path}/datail/${row.userid}">${row.title}</td>
+			<td>${row.seq}</td>
+			<td><a href="${path}/datail/${row.userid}">${row.title}</a></td>
 			<td>
 				<a href="${path}/address/view.do?userid=${row.userid}">${row.userid}</a>
 			</td>
 			<td><fmt:formatDate value="${row.join_date}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 		</tr>
-		</c:forEach>--%>
+		</c:forEach>
 	</table>
 </body>
 </html>

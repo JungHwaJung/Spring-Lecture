@@ -44,17 +44,5 @@ public class MainController {
 		return;
 	}
 	
-	@RequestMapping(value = "noticeboard.do", method = RequestMethod.GET)
-	public String board(Model model) {
-		logger.info("게시판 페이지 시작");
-		model.addAttribute("message", "게시판 화면입니다");
-		return "noticeboard";
-	}
 	
-	@RequestMapping(value = "nbwrite.do", method = RequestMethod.GET)
-	public String nbwrite(Model model) {
-		logger.info("게시판 글쓰기 페이지 시작");
-		model.addAttribute("message", "게시판 글쓰기 화면입니다");
-		return "nbwrite";
-	}
 }

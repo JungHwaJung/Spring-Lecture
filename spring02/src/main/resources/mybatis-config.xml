@@ -6,6 +6,7 @@
 
 	<typeAliases>
 		<typeAlias alias="addressbookDto" type="com.example.spring02.model.dto.AddressBookDTO"/>
+		<typeAlias alias="boardDto" type="com.example.spring02.model.dto.BoardDTO"/>
 	</typeAliases>
 
 </configuration>
