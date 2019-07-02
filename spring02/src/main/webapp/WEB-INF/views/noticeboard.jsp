@@ -6,6 +6,11 @@
 <meta charset="UTF-8">
 <title>게시판 화면</title>
 <%@ include file="include/header.jsp" %>
+<style>
+	a {
+		text-decoration:none;
+	}
+</style>
 </head>
 <body>
 <%@ include file="include/menu.jsp" %>
@@ -21,7 +26,7 @@
 		<c:forEach var="row" items="${list}">
 		<tr>
 			<td>${row.seq}</td>
-			<td><a href="${path}/datail/${row.userid}">${row.title}</a></td>
+			<td><a href="${path}/detail.do?userid=${row.userid}">${row.title}</a></td>
 			<td>
 				<!-- <a href="${path}/address/view.do?userid=${row.userid}"> -->${row.userid}
 			</td>

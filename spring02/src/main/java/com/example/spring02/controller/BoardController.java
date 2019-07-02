@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.spring02.model.dto.BoardDTO;
 import com.example.spring02.service.BoardService;
@@ -22,7 +23,7 @@ public class BoardController {
 	@Inject
 	BoardService board;
 	
-	@RequestMapping(value = "noticeboard.do", method = RequestMethod.GET)
+	@RequestMapping("/noticeboard.do")
 	public String boardList(Model model) {
 		logger.info("boardList() 시작");
 		List<BoardDTO> list = board.boardList();
@@ -35,5 +36,12 @@ public class BoardController {
 		logger.info("게시판 글쓰기 페이지 시작");
 		model.addAttribute("message", "게시판 글쓰기 화면입니다");
 		return "nbwrite";
+	}
+	
+	@RequestMapping(value = "detail.do", method = RequestMethod.GET)
+	public String detailView(@RequestParam String userid, Model model) {
+		logger.info("detailView() 시작");
+		model.addAttribute("dto", board.viewBoard(userid));
+		return "detail";
 	}
 }

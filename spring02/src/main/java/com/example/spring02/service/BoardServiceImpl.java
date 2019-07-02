@@ -28,8 +28,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public BoardDTO viewBoard(String userid) {
-		// TODO Auto-generated method stub
-		return null;
+		return bDao.viewBoard(userid);
 	}
 
 	@Override

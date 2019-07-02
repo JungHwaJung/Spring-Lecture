@@ -28,8 +28,7 @@ public class BoardDAOImpl implements BoardDAO {
 
 	@Override
 	public BoardDTO viewBoard(String userid) {
-		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectOne("board.viewBoard", userid);
 	}
 
 	@Override

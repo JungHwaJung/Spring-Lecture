@@ -9,7 +9,12 @@
 </head>
 <body>
 <%@ include file="include/menu.jsp" %>
-<h2>글쓰기 화면입니다</h2>
 <hr>
+<form action="detail" method="post">
+	글제목 : <input type="text" name="title">
+	<br><br>
+	글내용 : <textarea rows="10" cols="30" name="content"></textarea>
+	&nbsp;&nbsp;<input type="submit" value="등록">
+</form>
 </body>
 </html>
