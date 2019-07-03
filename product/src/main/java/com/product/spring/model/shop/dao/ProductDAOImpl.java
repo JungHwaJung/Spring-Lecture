@@ -22,7 +22,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	public ProductDTO datailProduct(int product_id) {
-		return sqlSession.selectOne("product.detaillist_product");
+		return sqlSession.selectOne("product.detaillist_product", product_id);
 	}
 
 	@Override

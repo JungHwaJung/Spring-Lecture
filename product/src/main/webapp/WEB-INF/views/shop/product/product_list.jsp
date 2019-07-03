@@ -29,7 +29,7 @@
 	<tr align="center">
 		<td>${row.product_id}</td>
 		<td><img src="${path}/resources/images/${row.picture_url}" width="100" height="100"></td>
-		<td><a href="${path}/shop/product/detail/${row.product_id}">${row.product_name}</a></td>
+		<td><a href="${path}/shop/product/detail.do?product_id=${row.product_id}">${row.product_name}</a></td>
 		<td><fmt:formatNumber value="${row.price}" pattern="#,###" /></td>
 	</tr>
 </c:forEach>

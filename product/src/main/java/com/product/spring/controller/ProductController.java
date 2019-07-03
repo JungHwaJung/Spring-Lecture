@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.product.spring.model.shop.service.ProductService;
@@ -42,12 +43,14 @@ public class ProductController {
 		return mav;		//페이지 이동
 	}
 	
-	@RequestMapping("/shop/product/detail/{product_id}")
-	public ModelAndView detaillist(@PathVariable("product_id") int product_id, ModelAndView mav) {
+	@RequestMapping(value = "/shop/product/detail.do", method = RequestMethod.GET)
+	public String detaillist(@RequestParam int product_id, Model model) {
 		logger.info("detaillist시작");
-		mav.setViewName("shop/product/product_detaillist");		//이동할 페이지 이름
-		mav.addObject("dto", productService.datailProduct(product_id));	//데이터 저장
-		return mav;		//페이지 이동
+		//model.setViewName("shop/product/product_detaillist");		//이동할 페이지 이름
+		//mav.addObject("dto", productService.datailProduct(product_id));	//데이터 저장
+		
+		model.addAttribute("dto", productService.datailProduct(product_id));
+		return "shop/product/product_detaillist";		//페이지 이동
 	}
 
 }
