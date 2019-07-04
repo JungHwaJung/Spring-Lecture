@@ -6,9 +6,22 @@
 <meta charset="UTF-8">
 <title>상품목록 상세화면</title>
 <%@ include file="../../include/header.jsp" %>
+<script>
+$(function() {
+	$("#back").click(function() {
+		document.form1.action="${path}/shop/product/list.do";
+		document.form1.submit();
+	});
+	
+})
+</script>
 </head>
+<style>
+	table { text-decoration:none;}
+</style>
 <body>
 <%@ include file="../../include/filemenu.jsp" %>
+<h2>상품 정보</h2>
 <table border="1" width="500px">
 	<tr>
 		<td>상품ID</td>
@@ -28,8 +41,9 @@
 	</tr>
 	<tr>
 		<td>이미지</td>
-		<td><img src="${path}/resources/images/${dto.picture_url}" width="100" height="100"></td>
+		<td><img src="${path}/resources/images/${dto.picture_url}" width="300px" height="300px"></td>
 	</tr>
 </table>
+<input type="button" value="뒤로가기" id="back">
 </body>
 </html>

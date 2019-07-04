@@ -17,8 +17,8 @@
 <body>
 <%@ include file="../../include/filemenu.jsp" %>
 <h2>상품 목록</h2>
-<button type="button" id="btnAdd">상품등록</button>
 <table border="1" width="500px">
+<button type="button" id="btnAdd">상품등록</button><br><br>
 	<tr>
 		<th>상품ID</th>
 		<th>이미지</th>
@@ -30,7 +30,7 @@
 		<td>${row.product_id}</td>
 		<td><img src="${path}/resources/images/${row.picture_url}" width="100" height="100"></td>
 		<td><a href="${path}/shop/product/detail.do?product_id=${row.product_id}">${row.product_name}</a></td>
-		<td><fmt:formatNumber value="${row.price}" pattern="#,###" /></td>
+		<td><fmt:formatNumber value="${row.price}" pattern="#,###" />원</td>
 	</tr>
 </c:forEach>
 </table>

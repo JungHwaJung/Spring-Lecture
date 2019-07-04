@@ -43,7 +43,7 @@ public class ProductController {
 		return mav;		//페이지 이동
 	}
 	
-	@RequestMapping(value = "/shop/product/detail.do", method = RequestMethod.GET)
+	@RequestMapping("/shop/product/detail.do")
 	public String detaillist(@RequestParam int product_id, Model model) {
 		logger.info("detaillist시작");
 		//model.setViewName("shop/product/product_detaillist");		//이동할 페이지 이름
