@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>게시판 화면</title>
-<%@ include file="include/header.jsp" %>
+<%@ include file="../include/header.jsp" %>
 <style>
 	a {
 		text-decoration:none;
@@ -13,7 +13,7 @@
 </style>
 </head>
 <body>
-<%@ include file="include/menu.jsp" %>
+<%@ include file="../include/menu.jsp" %>
 <input type="button" value="글쓰기" onclick="location.href='${path}/nbwrite.do'">
 	
 	<table border="1" width="700px">

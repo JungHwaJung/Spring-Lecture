@@ -5,11 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>글 상세보기 화면</title>
-<%@ include file="include/header.jsp" %>
+<%@ include file="../include/header.jsp" %>
 <script>
 $(function() {
 	$("#back").click(function() {
-		document.form1.action="${path}/noticeboard.do";
+		document.form1.action="${path}/board/noticeboard.do";
 		document.form1.submit();
 	});
 	
@@ -20,7 +20,7 @@ $(function() {
 	body { text-align:center; }
 </style>
 <body>
-<%@ include file="include/menu.jsp" %>
+<%@ include file="../include/menu.jsp" %>
 <h2>게시판</h2>
 	<form action="" name="form1" method="post">
 		<table border="1" width="700px">

@@ -23,25 +23,25 @@ public class BoardController {
 	@Inject
 	BoardService board;
 	
-	@RequestMapping("/noticeboard.do")
+	@RequestMapping("board/noticeboard.do")
 	public String boardList(Model model) {
 		logger.info("boardList() 시작");
 		List<BoardDTO> list = board.boardList();
 		model.addAttribute("list", list);
-		return "noticeboard";
+		return "board/noticeboard";
 	}
 	
 	@RequestMapping(value = "nbwrite.do", method = RequestMethod.GET)
 	public String nbwrite(Model model) {
 		logger.info("게시판 글쓰기 페이지 시작");
 		model.addAttribute("message", "게시판 글쓰기 화면입니다");
-		return "nbwrite";
+		return "board/nbwrite";
 	}
 	
 	@RequestMapping(value = "detail.do", method = RequestMethod.GET)
 	public String detailView(@RequestParam String userid, Model model) {
 		logger.info("detailView() 시작");
 		model.addAttribute("dto", board.viewBoard(userid));
-		return "detail";
+		return "board/detail";
 	}
 }

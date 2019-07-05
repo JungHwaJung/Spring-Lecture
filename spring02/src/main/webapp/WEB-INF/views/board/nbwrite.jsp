@@ -5,12 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>게시판 글쓰기</title>
-<%@ include file="include/header.jsp" %>
+<%@ include file="../include/header.jsp" %>
 </head>
 <body>
-<%@ include file="include/menu.jsp" %>
+<%@ include file="../include/menu.jsp" %>
 <hr>
-<form action="detail" method="post">
+<form action="write" method="post">
 	글제목 : <input type="text" name="title">
 	<br><br>
 	글내용 : <textarea rows="10" cols="30" name="content"></textarea>

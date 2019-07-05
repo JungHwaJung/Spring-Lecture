@@ -15,7 +15,7 @@
 		<a href="${path}/gugu.do?dan=3">구구단</a>
 		<a href="${path}/test.do">테스트</a>
 		<a href="${path}/address/list.do">주소록</a>
-		<a href="${path}/noticeboard.do">게시판</a>
+		<a href="${path}/board/noticeboard.do">게시판</a>
 	</div>
 
 	<h2>${message}</h2>
