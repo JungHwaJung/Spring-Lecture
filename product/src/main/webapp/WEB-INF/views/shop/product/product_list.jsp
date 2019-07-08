@@ -13,11 +13,17 @@
 		});
 	})
 </script>
+<style>
+	body, table {
+		font-family : "NanumSquare", sans-serif;
+		text-align : center;
+	}
+</style>
 </head>
 <body>
 <%@ include file="../../include/filemenu.jsp" %>
 <h2>상품 목록</h2>
-<table border="1" width="500px">
+<table border="1" width="500px" align=center>
 <button type="button" id="btnAdd">상품등록</button><br><br>
 	<tr>
 		<th>상품ID</th>

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.product.spring.model.shop.dto.ProductDTO;
 import com.product.spring.model.shop.service.ProductService;
 
 @Controller
@@ -51,6 +52,13 @@ public class ProductController {
 		
 		model.addAttribute("dto", productService.datailProduct(product_id));
 		return "shop/product/product_detaillist";		//페이지 이동
+	}
+	
+	@RequestMapping("/shop/product/write.do")
+	public String write() {
+		logger.info("write() 시작");
+
+		return "shop/product/product_write";		//페이지 이동
 	}
 
 }

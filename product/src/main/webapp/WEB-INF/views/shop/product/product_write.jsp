@@ -9,7 +9,7 @@
 </head>
 <body>
 <%@ include file="../../include/filemenu.jsp" %>
-<form action="" name="form2" method="post">
+<!--  <form action="" name="form2" method="post">
 	<table>
 		<tr>
 			<td>상품ID</td>
@@ -33,6 +33,6 @@
 		<input type="submit" value="파일불러오기" />
 		</tr>
 	</table>
-</form>
+</form>-->
 </body>
 </html>
